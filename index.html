@@ -19,7 +19,7 @@
   <body>
     <!-- Header -->
     <header class="page-header">
-      <div class="header container">
+      <div class="page-header__container container">
         <!-- logo -->
         <a class="header__logo logo" href="./index.html">
           <span class="logo--blue-text">Web</span
@@ -29,28 +29,28 @@
           <!-- about -->
           <ul class="nav__list">
             <li class="nav__list-item">
-              <a class="nav-link current" href="./index.html">Студия</a>
+              <a class="nav__link nav__link--current" href="./index.html">Студия</a>
             </li>
             <li class="nav__list-item">
-              <a class="nav-link" href="./portfolio.html">Портфолио</a>
+              <a class="nav__link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="nav__list-item">
-              <a class="nav-link" href="#">Контакты</a>
+              <a class="nav__link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
         <!-- Contacts -->
-        <ul class="contacts">
-          <li class="contact-list-item">
-            <a class="contacts-link" href="mailto:info@devstudio.com"
-              ><svg class="contact-icon" width="16" height="12">
+        <ul class="contact__list">
+          <li class="contact__list-item">
+            <a class="contact__link" href="mailto:info@devstudio.com"
+              ><svg class="contact__icon" width="16" height="12">
               <use href="./images/icons.svg#icon-mail"/>
             </svg>info@devstudio.com</a
             >
           </li>
-          <li class="contact-list-item">
-            <a class="contacts-link" href="tel:+380961111111"
-              ><svg class="contact-icon" width="10" height="16">
+          <li class="contact__list-item">
+            <a class="contact__link" href="tel:+380961111111"
+              ><svg class="contact__icon" width="10" height="16">
               <use href="./images/icons.svg#icon-phone"/>
             </svg>+38 096 111 11 11</a
             >
@@ -61,78 +61,77 @@
     <!-- Main -->
     <main>
       <!-- Hero (order section) -->
-      <section class="section hero">
-
+      <section class="section hero-section">
         <div class="vertical-container">
-          <h1 class="hero-h1">
+          <h1 class="hero-section__main-title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
+          <button class="hero-section__modal-button" data-modal-open type="button" name="button">Заказать услугу</button>
+          <div class="backdrop backdrop--hidden" data-modal>
+            <div class="modal-container">
               <form class="modal-form">
-                <h1 class="modal-h1">Оставьте свои данные, мы вам перезвоним</h1>
-                <ul class="modal-label-list">
-                  <li class="modal-label-list-item">
-                    <label class="modal-label">
-                      <p class="modal-label-list-p">Имя</p>
-                      <span class="modal-label-span">
-                        <input class="modal-input" type="name" name="name"/>
-                        <svg class="modal-svg" width="18" height="18">
+                <h1 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h1>
+                <ul class="modal-form__label-list">
+                  <li class="modal-form__label-item">
+                    <label class="modal-form__label modal-form__label--hovered">
+                      <p class="modal-form__label-data">Имя</p>
+                      <span class="modal-form__input-container">
+                        <input class="modal-form__input modal-form__input--selected" type="name" name="name"/>
+                        <svg class="modal-form__icon modal-form__icon--hovered" width="18" height="18">
                           <use href="./images/icons.svg#icon-person-modal" />
                         </svg>
                       </span>
                     </label>
                   </li>
-                  <li class="modal-label-list-item">
-                    <label class="modal-label">
-                      <p class="modal-label-list-p">Телефон</p>
-                      <span class="modal-label-span">
-                        <input class="modal-input"  type="tel" name="tel"/>
-                        <svg class="modal-svg" width="18" height="18">
+                  <li class="modal-form__label-item">
+                    <label class="modal-form__label modal-form__label--hovered">
+                      <p class="modal-form__label-data">Телефон</p>
+                      <span class="modal-form__input-container">
+                        <input class="modal-form__input modal-form__input--selected"  type="tel" name="tel"/>
+                        <svg class="modal-form__icon modal-form__icon--hovered" width="18" height="18">
                           <use href="./images/icons.svg#icon-phone-modal" />
                         </svg>
                       </span>
                     </label>
                   </li>
-                  <li class="modal-label-list-item">
-                    <label class="modal-label">
-                      <p class="modal-label-list-p">Почта</p>
-                      <span class="modal-label-span">
-                        <input class="modal-input"  type="email" name="email"/>
-                        <svg class="modal-svg" width="18" height="18">
+                  <li class="modal-form__label-item">
+                    <label class="modal-form__label modal-form__label--hovered">
+                      <p class="modal-form__label-data">Почта</p>
+                      <span class="modal-form__input-container">
+                        <input class="modal-form__input modal-form__input--selected"  type="email" name="email"/>
+                        <svg class="modal-form__icon modal-form__icon--hovered" width="18" height="18">
                           <use href="./images/icons.svg#icon-email-modal" />
                         </svg>
                       </span>
                     </label>
                   </li>
-                  <li class="modal-label-list-item">
-                    <label class="modal-label">
-                      <p class="modal-label-list-p">Комментарий</p>
-                      <span class="modal-label-span">
-                        <textarea class="modal-input modal-comment" placeholder="Введите текст"></textarea> 
+                  <li class="modal-form__label-item">
+                    <label class="modal-form__label modal-form__label--hovered">
+                      <p class="modal-form__label-data">Комментарий</p>
+                      <span class="modal-form__input-container">
+                        <textarea class="modal-form__input modal-form__comment-area modal-form__input--selected" placeholder="Введите текст"></textarea> 
                       </span>
                     </label>
                   </li>
                 </ul>
-                <label class="modal-checkbox-label">
-                  <p class="modal-checkbox-label-p">Соглашаюсь с рассылкой и принимаю <a class="modal-checkbox-label-a" href="">Условия договора</a></p>
-                  <input class="checkbox" type="checkbox" name="checkbox">
-                  <svg class="checkbox-modal-svg" width="16" height="15">
+                <label class="modal-form__checkbox modal-form__checkbox--hovered">
+                  <p class="modal-form__checkbox-data">Соглашаюсь с рассылкой и принимаю <a class="modal-form__checkbox-link" href="">Условия договора</a></p>
+                  <input class="modal-form__checkbox-input modal-form__checkbox-input--checked" type="checkbox" name="checkbox">
+                  <svg class="modal-form__checkbox-icon" width="16" height="15">
                     <use href="./images/icons.svg#icon-modal-checkbox">
                   </svg>
-                  <svg class="checkbox-modal-svg checked" width="16" height="15">
+                  <svg class="modal-form__checkbox-icon modal-form__checkbox-icon--checked" width="16" height="15">
                     <use href="./images/icons.svg#icon-check-modal">
                   </svg>
                 </label>
-                <button class="submit-button" type="submit">
+                <button class="modal-form__submit-button submit-button" type="submit">
                   Отправить
                 </button>
               </form>
-              <button class="close-btn" data-modal-close type="button">
+              <button class="modal-form__close-button modal-form__close-button--selected" data-modal-close type="button">
 
-                  <svg class="close-modal-svg" width="18" height="18">
+                  <svg class="modal-form__close-icon modal-form__close-icon--selected" width="18" height="18">
                   <use href="./images/icons.svg#icon-close-modal">
                 </svg>
 
@@ -142,54 +141,54 @@
         </div>
       </section>
       <!-- Team Qualities -->
-          <section class="section qalities">
-        <div class="container">
-          <h2 class="qalities-h2">Качества команды</h2>
-          <ul class="qalities-list">
-            <li class="qalities-item">
-              <div class="qalities-icon-container">
-                <svg class="qalities-icon" width="70" height="70">
+          <section class="qalities-section section">
+        <div class="qalities-section__container">
+          <h2 class="qalities-section__main-title main-title--hidden">Качества команды</h2>
+          <ul class="qalities-section__list">
+            <li class="qalities-section__list-item">
+              <div class="qalities-section__icon-container">
+                <svg class="qalities-section__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-antenna"/>
                 </svg>
               </div>
-              <h3 class="qualities-h3">Внимание к деталям</h3>
-              <p class="qualities-p">
+              <h3 class="qalities-section__title">Внимание к деталям</h3>
+              <p class="qalities-section__data">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="qalities-item">
-              <div class="qalities-icon-container">
-                <svg class="qalities-icon" width="70" height="70">
+            <li class="qalities-section__list-item">
+              <div class="qalities-section__icon-container">
+                <svg class="qalities-section__icon" width="70" height="70">
               <use href="./images/icons.svg#icon-clock"/>
             </svg>
               </div>
-              <h3 class="qualities-h3">Пунктуальность</h3>
-              <p class="qualities-p">
+              <h3 class="qalities-section__title">Пунктуальность</h3>
+              <p class="qalities-section__data">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="qalities-item">
-              <div class="qalities-icon-container">
-                <svg class="qalities-icon" width="70" height="70">
+            <li class="qalities-section__list-item">
+              <div class="qalities-section__icon-container">
+                <svg class="qalities-section__icon" width="70" height="70">
               <use href="./images/icons.svg#icon-diagram"/>
             </svg>
               </div>
-              <h3 class="qualities-h3">Планирование</h3>
-              <p class="qualities-p">
+              <h3 class="qalities-section__title">Планирование</h3>
+              <p class="qalities-section__data">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="qalities-item">
-              <div class="qalities-icon-container">
-                <svg class="qalities-icon" width="70" height="70">
+            <li class="qalities-section__list-item">
+              <div class="qalities-section__icon-container">
+                <svg class="qalities-section__icon" width="70" height="70">
               <use href="./images/icons.svg#icon-astronaut"/>
             </svg>
               </div>
-              <h3 class="qualities-h3">Современные технологии</h3>
-              <p class="qualities-p">
+              <h3 class="qalities-section__title">Современные технологии</h3>
+              <p class="qalities-section__data">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -478,76 +477,76 @@
     <footer class="page-footer">
       <div class="container">
        <div class="vertical-container">
-         <a class="logo footer__logo" href="./index.html">
+         <a class="logo page-footer__logo" href="./index.html">
           <span class="logo--blue-text">Web</span
-          ><span class="footer__logo--white-text">Studio</span>
+          ><span class="page-footer__logo--white-text">Studio</span>
          </a>
           <!-- Address -->
           <address class="footer-address">
-            <ul class="address-list">
-              <li class="address-item">
+            <ul class="footer-address__list">
+              <li class="footer-address__item">
                 <a
-                  class="address-link map-link"
+                  class="footer-address__link footer-address__map-link"
                   href="https://goo.gl/maps/o6okpZwp64HQ24k48"
                   target="_blank"
                   rel="noopener noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="address-item">
-                <a class="address-link" href="info@example.com"
+              <li class="footer-address__item">
+                <a class="footer-address__link" href="info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li class="address-item">
-                <a class="address-link" href="tel:+380961111111"
+              <li class="footer-address__item">
+                <a class="footer-address__link" href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-      <div class="footer-socials">
-                <p class="footer-p">присоединяйтесь</p>
-                        <ul class="footer-social-links">
+      <section class="page-footer__socials-section">
+                <p class="page-footer__text">присоединяйтесь</p>
+                        <ul class="socials-section__list">
                   <li>
-                    <a class="footer-social-link" href="">
+                    <a class="socials-section__link" href="">
                       <svg width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"/>
                        </svg></a>
                   </li>
                   <li>
-                      <a class="footer-social-link" href="">
+                      <a class="socials-section__link" href="">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#icon-twitter"/>
                         </svg></a>
                   </li>
                   <li>
-                      <a class="footer-social-link" href="">
+                      <a class="socials-section__link" href="">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#icon-facebook"/>
                         </svg></a>
                   </li>
                   <li>
-                      <a class="footer-social-link last" href="">
+                      <a class="socials-section__link last" href="">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#icon-linkedin"/>
                         </svg></a>
                   </li>
                 </ul>
-      </div>
-      <div class="pre-subscribe-container vertical-container">
-        <p class="footer-p">Подпишитесь на рассылку</p>
+      </section>
+      <section class="page-footer__subscribe-section vertical-container">
+        <p class="page-footer__text">Подпишитесь на рассылку</p>
         <form>
-          <label class="subscribe-container">
-            <input class="subscribe-input" type="email" placeholder="Email">
-        <button class="submit-button" type="submit">Подписаться<svg class="submit-button-svg" width="24" height="24">
+          <label class="subscribe-section__container">
+            <input class="subscribe-section__input" type="email" placeholder="Email">
+        <button class="submit-button" type="submit">Подписаться<svg class="submit-button__svg" width="24" height="24">
           <use href="./images/icons.svg#icon-subscribe">
         </svg> </button>
       </input>
           </label>
         </form>
-      </div>
+      </section>
     </div>
     </footer>
       <script src="./js/modal.js"></script>
