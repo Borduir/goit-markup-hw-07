@@ -471,21 +471,21 @@ button {
 
 /* Doing section styles */
 
-.doing-list {
+.doing-section__list {
   display: flex;
   margin-left: auto;
   margin-right: auto;
 }
 
-.doing-item {
+.doing-section__item {
   position: relative;
 }
 
-.doing-item:not(:last-child) {
+.doing-section__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.section-title {
+.title {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -495,7 +495,7 @@ button {
   margin-bottom: 50px;
 }
 
-.doing-about-container {
+.doing-section__data-container {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -506,7 +506,7 @@ button {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.doing-about-container-h2 {
+.doing-section__data {
   color: var(--primary-white-color);
   text-transform: uppercase;
   font-style: normal;
@@ -522,43 +522,42 @@ button {
   background-color: var(--third-bacground-color);
 }
 
-.team-item-about {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.team-list {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.team-item {
+.team-section__item {
   background-color: var(--primary-white-color);
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item:not(:last-child) {
+.team-section__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-item-h3 {
+.team-section__person-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-section__list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-section__person-name {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.team-item-p {
+.team-section__person-position {
   margin-bottom: 16px;
 }
 
-.social-link {
+.team-section__socials-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -571,17 +570,17 @@ button {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:not(.last) {
+.team-section__socials-link:not(.last) {
   margin-right: 10px;
 }
 
-.social-link:hover,
-.social-link:focus {
+.team-section__socials-link--selected:hover,
+.team-section__socials-link--selected:focus {
   background-color: var(--accent-text-color);
   fill: var(--primary-white-color);
 }
 
-.social-links {
+.socials-list {
   display: flex;
   margin-left: 32px;
   margin-right: 32px;
@@ -589,7 +588,7 @@ button {
 
 /* Clients section styles */
 
-.client-link {
+.clients-section__link {
   display: flex;
   width: 170px;
   height: 92px;
@@ -602,16 +601,16 @@ button {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list {
+.clients-section__list {
   display: flex;
 }
 
-.client-link:not(.last) {
+.clients-section__link:not(.last) {
   margin-right: 30px;
 }
 
-.client-link:hover,
-.client-link:focus {
+.clients-section__link--selected:hover,
+.clients-section__link--selected:focus {
   fill: var(--accent-text-color);
   border-color: var(--accent-text-color);
 }
@@ -755,41 +754,28 @@ button {
 }
 
 /* portfolio styles */
-.portfolio {
+.portfolio-section {
   background-color: var(--primary-white-color);
   padding-bottom: 64px;
 }
 
-.section.portfolio .container {
+.portfolio-section__container {
   padding-left: 0;
   padding-right: 0;
 }
 
-.portfolio-h1 {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
-.filter-list {
+.portfolio-section__filter-list {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
 }
 
-.filter-item {
+.portfolio-section__filter-item {
   margin-right: 8px;
 }
 
-.filter-button {
+.portfolio-section__filter-button {
   font-family: inherit;
   background-color: var(--third-bacground-color);
   font-size: 16px;
@@ -807,19 +793,19 @@ button {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.portfolio-section__filter-button--selected:hover,
+.portfolio-section__filter-button--selected:focus {
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.last-filter-button {
+.portfolio-section__filter-button--last {
   margin: 0;
 }
 
-.project-list {
+.portfolio-section__project-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
@@ -830,15 +816,8 @@ button {
   padding-right: 15px;
 }
 
-.project-item {
+.portfolio-section__project-item {
   margin-bottom: 30px;
-}
-
-.project-item:not(:nth-child(3n + 3)) {
-  margin-right: 26px;
-}
-
-.project-item {
   border: 1px solid transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -846,7 +825,11 @@ button {
   overflow: hidden;
 }
 
-.overflow-container {
+.portfolio-section__project-item:not(:nth-child(3n + 3)) {
+  margin-right: 26px;
+}
+
+.portfolio-section__overflow-container {
   display: flex;
   position: absolute;
   width: 370px;
@@ -862,11 +845,11 @@ button {
   color: var(--primary-white-color);
 }
 
-.project-item:hover .overflow-container {
+.portfolio-section__project-item--selected:hover .portfolio-section__overflow-container--hovered {
   transform: translateY(0);
 }
 
-.project-item-about {
+.portfolio-section__data-container {
   position: relative;
   background-color: #fff;
   padding-top: 20px;
@@ -879,25 +862,26 @@ button {
   z-index: 2;
 }
 
-.project-item:hover,
-.project-item:focus {
+.portfolio-section__project-item--selected:hover,
+.portfolio-section__project-item--selected:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-h2 {
+.portfolio-section__project-name {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 
-.portfolio-p {
+.portfolio-section__project-data {
   line-height: 1.67;
   letter-spacing: 0.03em;
+  
 }
 
-.project-item-about-p {
+.portfolio-section__project-type {
   color: var(--primary-text-color);
 }
