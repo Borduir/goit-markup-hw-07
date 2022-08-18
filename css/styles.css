@@ -66,6 +66,17 @@ button {
   cursor: pointer;
 }
 
+.main-title--hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* header styles */
 .page-header {
   background-color: var(--primary-white-color);
@@ -412,17 +423,6 @@ button {
 .qalities-section__container {
   display: flex;
   justify-content:center;
-}
-
-.main-title--hidden{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  bottom: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .qalities-section__list {
